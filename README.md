@@ -1,13 +1,13 @@
 # misp-export
 
-A minimal, standalone CLI tool to export all events from a [MISP](https://www.misp-project.org/) instance to a JSON file — ready for SIEM ingestion or sharing.
+A minimal, standalone CLI tool to export all events from a [MISP](https://www.misp-project.org/) instance to a JSON file - ready for SIEM ingestion or sharing.
 
 It retrieves every event visible to your API key (with full attributes and objects) via the MISP REST API and writes them to a single JSON file.
 
 ## Why it's minimal
 
-- **Standard library + `requests` only** — no `pymisp`, `click`, or `rich`.
-- **No auto-update, no subprocess calls** — the tool never shells out or contacts anything other than your configured MISP URL.
+- **Standard library + `requests` only** - no `pymisp`, `click`, or `rich`.
+- **No auto-update, no subprocess calls** - the tool never shells out or contacts anything other than your configured MISP URL.
 - Paginated REST calls so large instances export reliably.
 - Single-file (`main.py`) implementation that is easy to read and audit.
 
@@ -34,8 +34,8 @@ cp .env.example .env
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `MISP_URL` | Yes | — | Base URL of your MISP instance (`https://...`) |
-| `MISP_API_KEY` | Yes | — | Your MISP API authentication key |
+| `MISP_URL` | Yes | - | Base URL of your MISP instance (`https://...`) |
+| `MISP_API_KEY` | Yes | - | Your MISP API authentication key |
 | `MISP_VERIFY_SSL` | No | `true` | Set to `false` for self-signed certificates |
 | `MISP_TIMEOUT` | No | `120` | Request timeout in seconds |
 
